@@ -1,4 +1,3 @@
-/* ---اContainer --- */
 .container {
     margin: 0 auto;
     padding-inline: 12px;
@@ -21,121 +20,196 @@
     .container { max-width: 1320px; }
 }
 
-
 @media screen and (max-width: 1270px) {
 
-    /* 1. الـ Navbar: إخفاء القائمة والزرار وتقليل الارتفاع */
     .navbar ul, 
     .navbar .button {
-        display: none ;
+        display: none;
     }
     .navbar {
-        width: 95% ;
-        justify-content: center ;
-        height: auto ;
-        padding: 10px 0 ;
+        width: 95%;
+        justify-content: center;
+        height: auto;
+        padding: 10px 0;
         top: 10px;
     }
 
-    /* 2. السكشن الأول: إصلاح الارتفاع وتداخل العناصر المتحركة */
     .section1 {
-        height: auto ;
-        min-height: auto ;
+        height: auto;
+        min-height: auto;
         padding-top: 100px;
         padding-bottom: 50px;
     }
     .section1 .container .item1, 
     .section1 .container .item2 {
-        position: static ; /* إلغاء الـ absolute */
-        width: 100% ;
+        position: static;
+        width: 100%;
         text-align: center;
         margin: 20px 0;
     }
     
-    /* ضبط العناصر المتحركة (.trend و .featured) */
     .section1 .container .trend {
-        position: relative ;
-        width: fit-content ;
-        margin: 0 auto 15px auto ;
-        transform: rotate(0deg) ; /*إلغاء الدوران  ح */
-        box-shadow: 2px 2px #000;
+        position: relative;
+        width: fit-content;
+        margin: 0 auto 15px auto;
+        transform: rotate(0deg);
     }
     .section1 .container .item2 .featured span {
-        position: absolute ;
-        right: 50% ;
-        transform: translateX(50%) rotate(0deg) ;
-        top: -15px ;
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%) rotate(0deg);
+        top: -15px;
         z-index: 100;
     }
     .section1 .container .item1 h1 {
-        font-size: clamp(30px, 8vw, 45px) ;
+        font-size: clamp(30px, 8vw, 45px);
     }
     .section1 .container .item2 .img {
-        width: 90% ;
+        width: 90%;
         max-width: 500px;
         margin: 0 auto;
     }
 
-    /* 3. السكشن الثاني: ترتيب المقالات والسايدبار رأسيًا */
     .section2 {
-        height: auto ;
+        height: auto;
         padding-block: 40px;
     }
     .section2 .container {
-        flex-direction: column ;
+        flex-direction: column;
     }
     .section2 .container .fdiv, 
     .section2 .container .sdiv {
-        width: 100% ;
+        width: 100%;
     }
     .section2 .container .sdiv {
-        position: static ;
+        position: static;
         margin-top: 40px;
     }
-    /* تعديل المقالات لتناسب الموبايل */
+
     .section2 .container .fdiv .div1 .item1, 
     .section2 .container .fdiv .div2 .item2, 
     .section2 .container .fdiv .div3 .item3 {
-        flex-direction: column ;
-        text-align: center;
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
         padding: 15px;
+        gap: 15px;
     }
+
     .section2 .container .fdiv .div1 .item1 img, 
     .section2 .container .fdiv .div2 .item2 img, 
     .section2 .container .fdiv .div3 .item3 img {
-        width: 100% ;
-        margin: 0 0 15px 0 ;
+        width: 130px;
+        height: 110px;
+        margin: 10px 0 0 0;
+        flex-shrink: 0;
+        object-fit: cover;
     }
 
-    /* 4. السكشن الثالث: ضبط الكروت والأيقونات المتداخلة */
+    .section2 .container .fdiv .div1 .item1 .new,
+    .section2 .container .fdiv .div2 .item2 .hot,
+    .section2 .container .fdiv .div3 .item3 .VIRAL {
+        left: 110px;
+    }
+
     .section3 {
-        height: auto ;
-        min-height: auto ;
-        padding-block: 50px ;
+        height: auto;
+        padding-block: 50px;
     }
     .section3 .container .persons {
-        flex-direction: column ;
+        flex-direction: column;
         align-items: center;
-        gap: 30px ;
+        gap: 30px;
     }
     .section3 .container .person1, 
     .section3 .container .person2, 
     .section3 .container .person3 {
-        width: 100% ;
-        max-width: 380px;
-    }
-    /* ترتيب أيقونات السوشيال ميديا */
-    .section3 .container .person1 .item ul, 
-    .section3 .container .person2 .item ul, 
-    .section3 .container .person3 .item ul {
-        width: 90% ;
-        justify-content: center ;
-        gap: 15px ;
-        margin-top: 20px ;
+        width: 100%;
     }
 
-    /* 5. إخفاء عناصر الديكور التي بتسبب مشاكل المساحة */
+    .sec4 .box-sec4 {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .sec4 .left, .sec4 .right {
+        width: 100%;
+        margin: 0;
+        text-align: left;
+    }
+
+    .sec4 .left .texts .txt1 {
+        font-size: 26px;
+        margin-top: 30px;
+    }
+
+    .sec4 .left .texts [class^="txt"] {
+        justify-content: flex-start;
+        gap: 15px;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .sec4 .left .texts .txt2 {
+        box-shadow: none;
+        border: 2px solid #000;
+        border-radius: 0;
+        padding: 15px;
+    }
+
+    .sec4 .left button {
+        width: 100%;
+        margin-top: 30px;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .sec4 .right .box1, .sec4 .right .box2, .sec4 .right .box3 {
+        width: 100%;
+        border: 2px solid #000;
+        box-shadow: none;
+        border-radius: 0;
+        background-color: #fff;
+        margin-bottom: 20px;
+        margin-inline: auto;
+    }
+
+    .sec4 .right .text h5 {
+        margin-left: 0;
+    }
+
+    .sec5 .cols {
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        gap: 40px;
+    }
+
+    .sec5 .col1, .sec5 .col2, .sec5 .col3 {
+        width: 100%;
+    }
+
+    .sec5 .col3 input {
+        border-radius: 0;
+        border: 2px solid #fff;
+    }
+
+    .sec5 .col3 button {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        background-color: #ffdf20;
+        color: #000;
+    }
+
+    .sec5 .foot-sec5 {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
     .small1, .small2, .small3, .section3 .small1, .section3 .container .small2 {
-        display: none ;
+        display: none;
     }
 }

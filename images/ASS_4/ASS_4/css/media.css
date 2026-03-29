@@ -1,0 +1,47 @@
+@media screen and (min-width: 768px) {
+   
+
+}
+   
+
+
+
+@media screen and (min-width: 992px) {
+   .sec4 .box-sec4 {
+    display: flex;
+    justify-content: center;
+}
+
+    .sec4 .left {
+    width: 50%;
+    margin-top: 60px;
+}
+    
+.sec4 .right {
+    width: 50%;
+     margin-left: 50px;
+    margin-top: 60px;
+}
+}
+
+@media screen and (min-width: 1200px) {
+    .sec4 .box-sec4 {
+    display: flex;
+    justify-content: center;
+}
+
+    .sec4 .left {
+    width: 50%;
+    margin-top: 60px;
+}
+    
+.sec4 .right {
+    width: 50%;
+     margin-left: 50px;
+    margin-top: 60px;
+}
+}
+
+@media screen and (min-width: 1400px) {
+
+}
